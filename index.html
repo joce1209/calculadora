@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora Simples</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Calculadora Simples</h1>
+
+  <input type="number" id="valor1" placeholder="Digite o 1º número" />
+  <input type="number" id="valor2" placeholder="Digite o 2º número" />
+
+  <select id="operacao">
+    <option value="+">Soma (+)</option>
+    <option value="-">Subtração (-)</option>
+    <option value="*">Multiplicação (*)</option>
+    <option value="/">Divisão (/)</option>
+  </select>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
