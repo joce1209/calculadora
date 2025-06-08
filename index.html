@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Calculadora Casio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Calculadora Real</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="calculadora">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Casio_logo.png" alt="Casio Logo" class="logo">
-    <div class="visor" id="resultado">0</div>
-    <div class="entrada">
-      <input type="number" id="valor1" placeholder="1º número" />
-      <input type="number" id="valor2" placeholder="2º número" />
-    </div>
+    <div class="visor" id="visor">0</div>
     <div class="botoes">
-      <button onclick="calcular('+')">+</button>
-      <button onclick="calcular('-')">−</button>
-      <button onclick="calcular('*')">×</button>
-      <button onclick="calcular('/')">÷</button>
+      <button onclick="limpar()">C</button>
+      <button onclick="adicionar('/')">÷</button>
+      <button onclick="adicionar('*')">×</button>
+      <button onclick="adicionar('-')">−</button>
+
+      <button onclick="adicionar('7')">7</button>
+      <button onclick="adicionar('8')">8</button>
+      <button onclick="adicionar('9')">9</button>
+      <button onclick="adicionar('+')">+</button>
+
+      <button onclick="adicionar('4')">4</button>
+      <button onclick="adicionar('5')">5</button>
+      <button onclick="adicionar('6')">6</button>
+      <button onclick="calcular()" class="igual">=</button>
+
+      <button onclick="adicionar('1')">1</button>
+      <button onclick="adicionar('2')">2</button>
+      <button onclick="adicionar('3')">3</button>
+      <button onclick="adicionar('.')">.</button>
+
+      <button onclick="adicionar('0')" class="zero">0</button>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
-

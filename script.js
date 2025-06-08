@@ -1,28 +1,23 @@
-function calcular(operacao) {
-  const valor1 = parseFloat(document.getElementById('valor1').value);
-  const valor2 = parseFloat(document.getElementById('valor2').value);
-  let resultado;
+let expressao = '';
 
-  if (isNaN(valor1) || isNaN(valor2)) {
-    resultado = "Erro!";
-  } else {
-    switch (operacao) {
-      case "+":
-        resultado = valor1 + valor2;
-        break;
-      case "-":
-        resultado = valor1 - valor2;
-        break;
-      case "*":
-        resultado = valor1 * valor2;
-        break;
-      case "/":
-        resultado = valor2 !== 0 ? valor1 / valor2 : "Erro!";
-        break;
-      default:
-        resultado = "Inválido";
-    }
-  }
-
-  document.getElementById('resultado').innerText = resultado;
+function adicionar(valor) {
+  expressao += valor;
+  document.getElementById('visor').innerText = expressao;
 }
+
+function limpar() {
+  expressao = '';
+  document.getElementById('visor').innerText = '0';
+}
+
+function calcular() {
+  try {
+    const resultado = eval(expressao);
+    document.getElementById('visor').innerText = resultado;
+    expressao = resultado.toString();
+  } catch (e) {
+    document.getElementById('visor').innerText = 'Erro';
+    expressao = '';
+  }
+}
+

@@ -1,53 +1,32 @@
 body {
-  background-color: #e6e6e6;
+  background-color: #d0d0d0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .calculadora {
-  background-color: #2d2d2d;
-  padding: 30px 20px;
+  background-color: #333;
+  padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  width: 320px;
-  text-align: center;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 15px;
-  width: 100px;
-  opacity: 0.9;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  width: 300px;
 }
 
 .visor {
   background-color: #000;
-  color: #00ff00;
-  font-size: 32px;
-  padding: 15px;
-  border-radius: 10px;
+  color: #0f0;
+  font-size: 36px;
   text-align: right;
+  padding: 20px;
+  border-radius: 10px;
   margin-bottom: 20px;
-  height: 50px;
-  box-shadow: inset 0 0 8px #00ff00;
-}
-
-.entrada {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.entrada input {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
+  box-shadow: inset 0 0 8px #0f0;
+  height: 60px;
+  overflow-x: auto;
 }
 
 .botoes {
@@ -56,17 +35,31 @@ body {
   gap: 10px;
 }
 
-.botoes button {
-  padding: 15px;
-  font-size: 18px;
-  background-color: #4f4f4f;
-  color: white;
+button {
+  padding: 20px;
+  font-size: 20px;
   border: none;
   border-radius: 10px;
+  background-color: #555;
+  color: white;
   cursor: pointer;
   transition: 0.2s;
 }
 
-.botoes button:hover {
-  background-color: #6c6c6c;
+button:hover {
+  background-color: #777;
 }
+
+button.igual {
+  grid-row: span 2;
+  background-color: #009688;
+}
+
+button.igual:hover {
+  background-color: #00796b;
+}
+
+button.zero {
+  grid-column: span 2;
+}
+
