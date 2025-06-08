@@ -13,7 +13,7 @@ body {
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  width: 300px;
+  width: 320px;
 }
 
 .visor {
@@ -51,8 +51,8 @@ button:hover {
 }
 
 button.igual {
-  grid-row: span 2;
   background-color: #009688;
+  grid-row: span 2;
 }
 
 button.igual:hover {
@@ -62,4 +62,5 @@ button.igual:hover {
 button.zero {
   grid-column: span 2;
 }
+
 
