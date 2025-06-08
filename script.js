@@ -1,11 +1,10 @@
-function calcular() {
+function calcular(operacao) {
   const valor1 = parseFloat(document.getElementById('valor1').value);
   const valor2 = parseFloat(document.getElementById('valor2').value);
-  const operacao = document.getElementById('operacao').value;
   let resultado;
 
   if (isNaN(valor1) || isNaN(valor2)) {
-    resultado = "Por favor, preencha os dois números!";
+    resultado = "Erro!";
   } else {
     switch (operacao) {
       case "+":
@@ -18,12 +17,12 @@ function calcular() {
         resultado = valor1 * valor2;
         break;
       case "/":
-        resultado = valor2 !== 0 ? valor1 / valor2 : "Não é possível dividir por zero!";
+        resultado = valor2 !== 0 ? valor1 / valor2 : "Erro!";
         break;
       default:
-        resultado = "Operação inválida!";
+        resultado = "Inválido";
     }
   }
 
-  document.getElementById('resultado').innerText = "Resultado: " + resultado;
+  document.getElementById('resultado').innerText = resultado;
 }

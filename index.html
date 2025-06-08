@@ -2,26 +2,26 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Calculadora Simples</title>
+  <title>Calculadora Casio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Calculadora Simples</h1>
-
-  <input type="number" id="valor1" placeholder="Digite o 1º número" />
-  <input type="number" id="valor2" placeholder="Digite o 2º número" />
-
-  <select id="operacao">
-    <option value="+">Soma (+)</option>
-    <option value="-">Subtração (-)</option>
-    <option value="*">Multiplicação (*)</option>
-    <option value="/">Divisão (/)</option>
-  </select>
-
-  <button onclick="calcular()">Calcular</button>
-
-  <div id="resultado"></div>
+  <div class="calculadora">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Casio_logo.png" alt="Casio Logo" class="logo">
+    <div class="visor" id="resultado">0</div>
+    <div class="entrada">
+      <input type="number" id="valor1" placeholder="1º número" />
+      <input type="number" id="valor2" placeholder="2º número" />
+    </div>
+    <div class="botoes">
+      <button onclick="calcular('+')">+</button>
+      <button onclick="calcular('-')">−</button>
+      <button onclick="calcular('*')">×</button>
+      <button onclick="calcular('/')">÷</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
